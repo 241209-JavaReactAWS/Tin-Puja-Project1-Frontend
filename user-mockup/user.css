@@ -1,5 +1,7 @@
 *{
     font-family: "Sofia", sans-serif;
+    text-decoration: none;
+    
 }
 
 .title{
@@ -12,6 +14,7 @@
     background-color: #dbd8e3;;
     text-align: center;
     box-shadow: 10px 10px 5px grey;
+
 }
 .table{
     text-align: center;
@@ -25,7 +28,7 @@
     height: 200px;
     width: 160px;
     border-radius: 40px;
-    border: solid 5px grey;
+    border: solid 5px white;
 
 }
 .footer{
@@ -66,10 +69,34 @@
 .buttongroup{
    justify-items: center;
    text-align: center;
-   margin-bottom: 20px;
+   margin-bottom: 1%;
+   margin-top: 1%;
    
 }
 .photos{
     height: auto;
     width: 100px;
+}
+.navClass{
+    font-size: 40px;
+    color: gold;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+.navLink:hover{
+background-color: blueviolet;
+color: gold;
+}
+.navLink{
+    background-color: bisque;
+    color: black;
+    border-radius: 40px;
+    box-shadow: 10px 10px 5px grey;
+}
+.logo:hover{
+    border-color: blueviolet;
+    border-style: dotted;
 }
