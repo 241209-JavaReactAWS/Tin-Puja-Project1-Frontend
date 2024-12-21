@@ -1,17 +1,10 @@
-//  import React from 'react';
+ import React from 'react';
 
-// import "./src/components/user/home/UserHome.css";
-// import "src/components/user/home/userHome.css";
-// import userHome from "./userHome.css";
-// import "./userHome.css"
-// import './userHome.css'
-// import { useState } from 'react';    useful
-// import PetService from '../../../userService/PetService'     useful
+import "./userHome.css"
+import { useState } from 'react';   
+import PetService from '../../../userService/PetService'    
 
-// import './userHome.css'
-
-
- function UserHome (){
+function UserHome (){
 
 // let petService:PetService = new PetService();
 
@@ -26,14 +19,14 @@
 // }
  
   return (
-    <>
+    <div className="root">
       <header className="styles.headergroup">
         <h1 className="styles.title">PET ADOPTION</h1>
           <img className="styles.logo" src=""/ >
           <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
     </header>
     <nav className="navClass"><a className="navLink" href="http://"> About Us</a>
-        <a className="navLink" href="http://127.0.0.1:5500/user-mockup/user.html"> Login</a>
+        <a className="navLink" href="/login"> Login</a>
         <a className="navLink" href="http://"> Signup</a> 
         <a className="navLink" href="http://"> Pets</a>
         <a className="navLink" href="http://"> Filter</a>
@@ -98,7 +91,7 @@
         <p>We save pets so you can give them a Life</p>
         Contact us 
     </footer>
-    </>
+    </ div>
   )
 }
 
