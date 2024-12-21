@@ -1,35 +1,67 @@
- import React from 'react';
+ import React, { useEffect } from 'react';
 
 import "./userHome.css"
 import { useState } from 'react';   
-import PetService from '../../../userService/PetService'    
+import axios from "axios";
+import {Link } from 'react-router-dom';
+
+// import PetService from '../../../userService/PetService'    
 
 function UserHome (){
 
 // let petService:PetService = new PetService();
 
-// const [allPets, setAllPets]= useState < any[]>([]); 
+    const [allPets, setAllPets] = useState<any[]>([]);
 
-// async function fetchAllPets() {
-//   await petService.getAllPets().then(response =>{
-//     const result =response.data;
-  
-//   setAllPets(result)
-// }).catch(err=>console.log(err));
-// }
+    // async function getAllPets(){
+    //     await axios.get('http:/localhost:8080/pet/fetchAll').then(res => {
+    //         console.log(res.data)
+    //         setAllPets(res.data)
+    //     }).catch(err => {
+    //         // Error Handling here
+    //         console.log(err)
+    //         // return res.status(401).send(err.message);
+    //         // https://www.geeksforgeeks.org/getting-error-handler-data-from-post-request-in-axios/
+    //     })
+    // }
+
+    useEffect(() => {
+
+        axios.get<any[]>("http://localhost:8080/fetchAll")
+        .then((res) => {
+            setAllPets(res.data)
+        })
+    }, [])
+
+    // async function getAllPets(){
+    //     try {
+    //         const response = await axios.get('http:/localhost:8080/pet/fetchAll');
+    //         setAllPets(response.data);
+    //       } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //       }
+    // }
+    
+
+
+    // useEffect(() => {
+    //     getAllPets()
+    // }, [])
+
+
  
   return (
     <>
-      <header className="styles.headergroup">
-        <h1 className="styles.title">PET ADOPTION</h1>
-          <img className="styles.logo" src=""/ >
+      <header className="headergroup">
+        <h1 className="title">PET ADOPTION</h1>
+          <img className="logo" src=""/>
           <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
     </header>
-    <nav className="navClass"><a className="navLink" href="http://"> About Us</a>
-        <a className="navLink" href="http://127.0.0.1:5500/user-mockup/user.html"> Login</a>
-        <a className="navLink" href="http://"> Signup</a> 
-        <a className="navLink" href="http://"> Pets</a>
-        <a className="navLink" href="http://"> Filter</a>
+    <nav className="navClass">
+        <Link className="navLink" to="/about"> About Us</Link>
+        <Link className="navLink" to="/login"> Login</Link>
+        <Link className="navLink" to="/signup"> Sign Up</Link>
+        <Link className="navLink" to="/pets"> Pets</Link>
         </nav>
         <section className="midsectiongroup">
         <h2 className="midsection"> Adopt a Life and save a Life</h2>
@@ -38,6 +70,44 @@ function UserHome (){
     <section className="buttongroup">
         <button className="button">Adopt Now</button>
     </section>
+
+{allPets}
+    {/* <div>
+      {allPets.map((item) => (
+        <p key={item.petId}>{item.name}</p>
+      ))}
+    </div> */}
+
+
+    {/* <div>
+        <h1>Fetching all pets stuff -- temp</h1>
+
+        
+        {
+            allPets.map( (pet) => {
+                return (
+                    <div key={pet.petId}>
+                       <p>{pet.name}</p>
+                    </div>
+                )
+            }
+
+            )
+        }
+        
+    </div> */}
+
+    {/* <div>
+      {data && (
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      )}
+    </div> */}
+
+
     <section className="tablegroup">
         <table className="table">
             <thead>
