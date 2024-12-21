@@ -4,9 +4,9 @@ import Header from './components/admin/header/AdminHeader'
 import UserHome from './components/user/home/UserHome'
 import AdminHome from './components/admin/home/AdminHome'
 import Login from './components/user/home/Login'
-import AboutUs from './components/user/home/AboutUs'
-import SignUp from './components/user/home/SignUp'
-import Pets from './components/user/home/Pets'
+import AboutUs from './components/user/home/about_me/AboutUs'
+import SignUp from './components/user/home/signup/SignUp'
+import Pets from './components/user/home/pets/Pets'
 
 function App() {
   return (
