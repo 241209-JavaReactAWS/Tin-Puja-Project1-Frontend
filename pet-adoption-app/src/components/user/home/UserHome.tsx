@@ -8,13 +8,13 @@ import UserHomeContent from './UserHomeContent';
 function UserHome (){
  
   return (
-    <>
-      <header className="headergroup">
-        <h1 className="title">PET ADOPTION</h1>
-          <img className="logo" src=""/>
+    <div className="root">
+      <header className="styles.headergroup">
+        <h1 className="styles.title">PET ADOPTION</h1>
+          <img className="styles.logo" src=""/ >
           <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
     </header>
-
+    
     <Navbar/>
 
     <UserHomeContent/>
@@ -26,7 +26,7 @@ function UserHome (){
         <p>We save pets so you can give them a Life</p>
         Contact us 
     </footer>
-    </>
+    </ div>
   )
 }
 
