@@ -19,14 +19,14 @@ function UserHome (){
 // }
  
   return (
-    <>
+    <div className="root">
       <header className="styles.headergroup">
         <h1 className="styles.title">PET ADOPTION</h1>
           <img className="styles.logo" src=""/ >
           <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
     </header>
     <nav className="navClass"><a className="navLink" href="http://"> About Us</a>
-        <a className="navLink" href="http://127.0.0.1:5500/user-mockup/user.html"> Login</a>
+        <a className="navLink" href="/login"> Login</a>
         <a className="navLink" href="http://"> Signup</a> 
         <a className="navLink" href="http://"> Pets</a>
         <a className="navLink" href="http://"> Filter</a>
@@ -91,7 +91,7 @@ function UserHome (){
         <p>We save pets so you can give them a Life</p>
         Contact us 
     </footer>
-    </>
+    </ div>
   )
 }
 

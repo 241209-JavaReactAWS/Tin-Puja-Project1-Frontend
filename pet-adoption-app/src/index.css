@@ -1,4 +1,4 @@
-html {
+/* html {
   padding: 1% 1.5% 1% 1.5%;
   margin: 0%;
   background-image: linear-gradient(45deg, black 0%, white 50%, black 100%);
@@ -78,7 +78,7 @@ td, th {
   text-align: center;
 }
 
-/* Popup Styles */
+
 .popup {
   display: none; 
   position: fixed;
@@ -115,4 +115,4 @@ button[type="submit"] {
 button[type="button"] {
   background-color: #f44336;
   color: white;
-}
+} */
