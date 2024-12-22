@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../../../navbar/Navbar'
 import { Container } from 'react-bootstrap'
+import logo from "../../../../img/IMG_1825.jpg"
+
 
 function ContactUs() {
   return (
@@ -22,6 +24,10 @@ function ContactUs() {
                 </div>
                 <p className='contactparagraph'>478 - 123 - 4567</p>
             </div>
+
+
+            <img className="logo" src={logo}/ >
+
         </Container>
         
     </div>
