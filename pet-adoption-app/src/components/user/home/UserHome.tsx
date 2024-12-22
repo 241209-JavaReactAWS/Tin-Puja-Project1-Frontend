@@ -1,30 +1,26 @@
  import React, { useEffect } from 'react';
 
 import "./userHome.css"
-import Pets from './pets/Pets';
 import Navbar from '../../navbar/Navbar';
 import HomeContent from './content/HomeContent';
+import UserHeader from './user_header/UserHeader';
+import UserFooter from './user_footer/UserFooter';
 
 function UserHome (){
  
   return (
-    <div className="root">
-      <header className="headergroup">
-        <h1 className="title">PET ADOPTION</h1>
-          <img className="logo" src=""/ >
-          <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
-    </header>
+    <>
+      <UserHeader/>
+
     
     <Navbar/>
 
     <HomeContent/>
+
+    <UserFooter/>
+
     
-    <footer className="footer">
-        About us 
-        <p>We save pets so you can give them a Life</p>
-        Contact us 
-    </footer>
-    </ div>
+    </>
   )
 }
 

@@ -36,6 +36,13 @@
     background-color: bisque;
     font-family: "Sofia", sans-serif;
     box-shadow: 10px 10px 5px grey;
+    margin-top: 50px;
+}
+.footeritems{
+    font-weight: bold;
+}
+.footeritemsgroup{
+    margin-right: 50px;
 }
 .midsection{
     text-align: center;
@@ -71,7 +78,6 @@
    text-align: center;
    margin-bottom: 1%;
    margin-top: 1%;
-   
 }
 .photos{
     height: auto;
