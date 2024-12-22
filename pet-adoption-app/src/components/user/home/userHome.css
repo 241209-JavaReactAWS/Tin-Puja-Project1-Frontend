@@ -105,6 +105,12 @@ color: gold;
     color: black;
     border-radius: 40px;
     box-shadow: 10px 10px 5px grey;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-decoration: none;
+    margin-right: 15px;
+
+    
 }
 .logo:hover{
     border-color: blueviolet;
