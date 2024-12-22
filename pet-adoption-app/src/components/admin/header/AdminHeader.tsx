@@ -45,7 +45,7 @@ function AdminHeader() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -88,10 +88,11 @@ function AdminHeader() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography key={page}
-                    component={Link}
-                    to={`/${page.toLowerCase()}`} // Convert page name to lowercase for routing
-                    sx={{ my: 2, color: 'white', display: 'block' }}>{page}</Typography>
+                    <Typography key={page}
+                        component={Link}
+                        to={`/admin/${page.toLowerCase()}`} // Convert page name to lowercase for routing
+                        sx={{ my: 2, color: 'blue', display: 'block' }}>{page}
+                    </Typography>
                 </MenuItem>
               ))}
             </Menu>
