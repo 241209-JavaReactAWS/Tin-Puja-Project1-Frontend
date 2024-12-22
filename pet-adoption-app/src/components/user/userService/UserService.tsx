@@ -2,15 +2,11 @@ import axios from "axios";
 
 class UserService {
 
-    async registerUsers(username : string, email : string, firstname : string, lastname : string, password : string){
-        return await axios.post("http://localhost:8080/user/register",
-            {
-                username,
-                email,
-                firstname,
-                lastname,
-                password
-            });
+    async registerUsers(register : any){
+        return await axios.post("http://localhost:8080/user/register", register)
+            .then(response => {
+                console.log(response.status)
+            }).catch(error => console.log(error))
     }
 
     
