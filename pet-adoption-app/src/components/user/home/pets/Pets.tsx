@@ -1,11 +1,36 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Container, Table } from 'react-bootstrap';
+import { Button, Container, Table } from 'react-bootstrap';
 import Navbar from '../../../navbar/Navbar';
+import PetService from '../../userService/PetService';
 
 function Pets() {
 
+    let petService = new PetService;
+
     const [allPets, setAllPets] = useState<any[]>([]);
+
+    // const [adopt, setAdopt] = useState<any>({
+    //     name : "",
+    //     beed : "",
+    //     age : "",
+    //     petConditon : "",
+    //     gender : "",
+    //     status : ""
+    // })
+
+    function AdoptPet(petId : number){
+        petService.adoptAPet(petId)
+        .then((res) => {
+            alert("Adoption was successful")
+            console.log("Adoption was sucesful")
+        }).catch(error => {
+            alert("Adoption attempt failed :  " + error)
+            console.log("Adoption attempt failed  :  "+ error)
+        })
+
+
+    }
 
     useEffect(() => {
 
@@ -25,7 +50,6 @@ function Pets() {
                     <thead>
                         <tr>
                             <th>Select</th>
-                            <th>Picture</th>
                             <th>Breed</th>
                             <th>Name</th>
                             <th>Age</th>
@@ -36,10 +60,24 @@ function Pets() {
                         </tr>
                             </thead>
                             <tbody>
-                    {allPets.map((item) => (
+
+                
+
+                    {/* { allPets.status == active ? */}
+                    
+                   { allPets.map((item) => (
+
+                        // item.status == "ACTIVE" ?
+
                         <tr key={item.petId}>
-                        <td><input type="checkbox"/></td>
-                        <td><img className="photos" src="/photos/golden.jpg" alt="Golden Retriever"/></td>
+                        <td>
+                            <Button
+                                type="submit"
+                                onClick={() => AdoptPet(item.petId)}
+                            >    
+                                Adopt
+                            </Button>
+                        </td>
                         <td>{item.breed}</td>
                         <td>{item.name}</td>
                         <td>{item.age}</td>
@@ -48,6 +86,7 @@ function Pets() {
                         <td>{item.status}</td>
                     </tr>
                     ))}
+                    
                         </tbody>
                     </Table>
                 </div>

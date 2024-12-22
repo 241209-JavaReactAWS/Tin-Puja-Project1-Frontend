@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from '../../../navbar/Navbar'
 import { Card, Col, Container, Row } from 'react-bootstrap'
 
-import flower_dog from "../../../../img/flower-dog.jpg";
-import aussie_puppy from "../../../../img/aussiepuppy.jpg";
-import cat from "../../../../img/cat.jpg";
+import coupleDog from "../../../../img/couple_dog.jpg";
+import dogMan from "../../../../img/dog_man.jpg";
+import dogMan2 from "../../../../img/dog_man_2.jpg";
 
 function AboutUs() {
   return (
@@ -32,19 +32,19 @@ function AboutUs() {
           <Row>
             <Col>
               <Card>
-                <img className='contentimg' src={aussie_puppy} alt="picture of an aussie puppy" />
-                <caption>By Mark - We love our pet</caption>
+                <img className='contentimg' src={coupleDog} alt="Picture of dog between a couple" />
+                <caption>Our dog makes the family complete</caption>
               </Card>
             </Col>
             <Col>
               <Card>
-                <img className='contentimg' src={aussie_puppy} alt="picture of an aussie puppy" />
-                <caption>By Mark - We love our pet</caption>
+                <img className='contentimg' src={dogMan} alt="Picture of a dog and man" />
+                <caption>Sparky make my day good and happy!</caption>
               </Card>
             </Col><Col>
               <Card>
-                <img className='contentimg' src={aussie_puppy} alt="picture of an aussie puppy" />
-                <caption>By Mark - We love our pet</caption>
+                <img className='contentimg' src={dogMan2} alt="Picture of a dog and man" />
+                <caption>He make a bit impact on my life</caption>
               </Card>
             </Col>
            

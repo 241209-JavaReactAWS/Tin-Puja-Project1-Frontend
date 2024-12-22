@@ -164,3 +164,8 @@ color: gold;
         box-shadow: 10px 10px 5px grey;
         border-radius: 30px;
 }
+.aboutusimg{
+    justify-content: center;
+    height: auto;
+    width: 400px;
+}

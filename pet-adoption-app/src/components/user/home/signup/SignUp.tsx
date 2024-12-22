@@ -10,12 +10,6 @@ function SignUp() {
   
   let userService = new UserService();
 
-  const [username, setUsername] = useState<any>("")
-  const [email, setEmail] = useState<any>("")
-  const [firstname, setFirstname] = useState<any>("")
-  const [lastname, setLastname] = useState<any>("")
-  const [password, setPassword] = useState<any>("")
-
   const [register, setRegister] = useState<any>({
     username : "",
     email : "",
@@ -37,53 +31,11 @@ function SignUp() {
     })
   }
 
-  
-  //Add error message for improver field validation
-  // async function reigsterNewUser (e : any){
-  //   e.preventDefault()
-  //   await userService.registerUsers(username, email, firstname, lastname, password).then(response => {
-  //     // adding username and email validation
-  //     // let usernameTrim = e.target.username.value.trim();  
-  //     // let emailTrim = e.target.email.value.trim();
-  //     // let firstnameTrim = e.target.firstname.value.trim();
-  //     // let lastnameTrim = e.target.lastname.value.trim();
-  //     // let passwordTrim = e.target.password.value.trim();
-
-  //       console.log(username)
-  //       console.log(email)
-  //       console.log(firstname)
-  //       console.log(lastname)
-  //       console.log(password)
-
-
-
-  //     // Add the email and feild validation with error handling here
-
-  //     // setUsername(response.data.username);
-  //     // setEmail(response.data.email);
-  //     // setFirstname(response.data.firstname)
-  //     // setLastname(response.data.lastname)
-  //     // setPassword(response.data.package)
-
-  //     setUsername(response.data.username);
-  //     setEmail(response.data.email);
-  //     setFirstname(response.data.firstname)
-  //     setLastname(response.data.lastname)
-  //     setPassword(response.data.password)
-      
-
-  //   }).catch(error => {
-  //     console.log("Register Userfailed");
-  //   });
-
     // setUsername("");
     // setEmail("");
     // setFirstname("")
     // setLastname("")
     // setPassword("")
-
-    
-  // }
 
   return (
     <div className='root'>
@@ -100,6 +52,7 @@ function SignUp() {
                   name = "username"
                   value = {register.username}
                   onChange = {registrationHanlder}
+                  required
                   />
             </FormGroup>
             <FormGroup>
@@ -110,6 +63,7 @@ function SignUp() {
                   name = "email"
                   value = {register.email}
                   onChange = {registrationHanlder}
+                  required
                   />      
               </FormGroup>
               <FormGroup>
@@ -120,6 +74,7 @@ function SignUp() {
                   name = "firstname"
                   value = {register.firstname}
                   onChange = {registrationHanlder}
+                  required
                   />
             </FormGroup>
               <FormGroup>
@@ -130,6 +85,7 @@ function SignUp() {
                   name = "lastname"
                   value = {register.lastname}
                   onChange = {registrationHanlder}
+                  required
                   />
             </FormGroup>
               <FormGroup>
@@ -140,6 +96,7 @@ function SignUp() {
                   name = "password"
                   value = {register.password}
                   onChange = {registrationHanlder}
+                  required
                   />      
               </FormGroup> 
             <Button 
