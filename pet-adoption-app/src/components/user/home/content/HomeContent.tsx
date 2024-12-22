@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import flower_dog from "../../../../img/flower-dog.jpg";
 import aussie_puppy from "../../../../img/aussiepuppy.jpg";
 import cat from "../../../../img/cat.jpg";
+import { Link } from 'react-router-dom';
 
 function UserHomeContent() {
 
@@ -28,12 +29,16 @@ function UserHomeContent() {
             <Col lg={4}></Col> 
             <Col>
               <section className="buttongroup">
+              <Link to="/pets">
                   <button className="button">Adopt Now</button>
+                </Link>
               </section>
             </Col>
             <Col>
               <section className="buttongroup">
+                <Link to="/pets">
                   <button className="button">View All Pets</button>
+                </Link>
               </section>
             </Col>
             <Col lg={4}></Col>             

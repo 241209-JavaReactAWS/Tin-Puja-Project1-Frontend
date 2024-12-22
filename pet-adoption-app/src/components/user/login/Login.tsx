@@ -14,6 +14,8 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import axios from 'axios';
+import UserFooter from '../home/user_footer/UserFooter';
+import Navbar from '../../navbar/Navbar';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -118,6 +120,7 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
 
   return (
     <div>
+      <Navbar/>
       <CssBaseline enableColorScheme />
       <SignInContainer direction="column" justifyContent="space-between">
         <Card variant="outlined">
@@ -196,6 +199,7 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
           </Box>
         </Card>
       </SignInContainer>
+      <UserFooter/>
       </div>
   );
 }
