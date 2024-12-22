@@ -4,6 +4,7 @@ import "../userHome.css"
 import Navbar from '../../../navbar/Navbar'
 import { Button, Container, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import UserService from '../../userService/UserService';
+import UserFooter from '../user_footer/UserFooter';
 
 
 function SignUp() {
@@ -106,6 +107,8 @@ function SignUp() {
             </Button>
           </Form>
         </Container>
+        <UserFooter/>
+
     </div>
 
   )

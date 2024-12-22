@@ -5,6 +5,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
 import coupleDog from "../../../../img/couple_dog.jpg";
 import dogMan from "../../../../img/dog_man.jpg";
 import dogMan2 from "../../../../img/dog_man_2.jpg";
+import UserFooter from '../user_footer/UserFooter';
 
 function AboutUs() {
   return (
@@ -56,6 +57,7 @@ function AboutUs() {
 
         
     </Container>
+    <UserFooter/>
     
 </div>
   )
