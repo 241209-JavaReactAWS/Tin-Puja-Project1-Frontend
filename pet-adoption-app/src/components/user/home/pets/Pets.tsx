@@ -9,7 +9,6 @@ function Pets() {
     useEffect(() => {
 
         axios.get("http://localhost:8080/api/pet/public/fetchAll")
-        // axios.get<any[]>("http://localhost:8080/fetchAll")
         .then((res) => {
             setAllPets(res.data)
         })
@@ -19,7 +18,6 @@ function Pets() {
     <>
     <Container>
         <h1>Pets</h1>
-        {/* {allPets} */}
 
  <div>
     <Table striped bordered hover>
