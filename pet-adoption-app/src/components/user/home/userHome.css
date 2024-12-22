@@ -30,7 +30,6 @@
     border-radius: 40px;
     border: solid 5px white;
     margin-bottom: 20px;
-
 }
 .logodescription{
     font-weight: bold;
@@ -44,6 +43,8 @@
 }
 .footeritems{
     font-weight: bold;
+    text-decoration: none;
+    color:  black;
 }
 .footeritemsgroup{
     margin-right: 50px;

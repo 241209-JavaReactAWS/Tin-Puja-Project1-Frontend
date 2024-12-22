@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 
 function Pets() {
 
@@ -8,7 +8,7 @@ function Pets() {
 
     useEffect(() => {
 
-        axios.get("http://localhost:8080/api/pet/fetchAll")
+        axios.get("http://localhost:8080/api/pet/public/fetchAll")
         // axios.get<any[]>("http://localhost:8080/fetchAll")
         .then((res) => {
             setAllPets(res.data)
@@ -19,13 +19,45 @@ function Pets() {
     <>
     <Container>
         <h1>Pets</h1>
-        {allPets}
+        {/* {allPets} */}
 
- {/* <div>
+ <div>
+    <Table striped bordered hover>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Picture</th>
+                <th>Breed</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Condition</th>
+                <th>Gender</th>
+                <th>Available</th>
+
+            </tr>
+                </thead>
+                <tbody>
         {allPets.map((item) => (
-          <p key={item.petId}>{item.name}</p>
+            <tr key={item.petId}>
+            <td><input type="checkbox"/></td>
+            <td><img className="photos" src="/photos/golden.jpg" alt="Golden Retriever"/></td>
+            <td>{item.breed}</td>
+            <td>{item.name}</td>
+            <td>{item.age}</td>
+            <td>{item.petCondition}</td>
+            <td>{item.gender}</td>
+            <td>{item.status}</td>
+
+
+        </tr>
+
+
+        //   <p key={item.petId}>{item.name}</p>
+
         ))}
-      </div> */}
+            </tbody>
+        </Table>
+      </div>
 
 
       {/* <div>
