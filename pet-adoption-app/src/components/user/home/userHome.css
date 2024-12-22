@@ -124,3 +124,42 @@ color: gold;
     margin-top: 40px;
     margin-bottom: 40px;
 }
+.contactgroup{
+    margin-top: 6opx;
+    text-align: center;
+}
+.contacttitle{
+    color:black;
+    font-size: 40px; 
+}
+.contactparagraph{
+    font-style: italic;
+    margin-top: 20px;
+    font: 30px;
+}
+.contacttitlehead{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: #dbd8e3;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
+}
+
+.contacttitlehead2{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: bisque;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
+}
+
+.contacttitlehead3{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: #defcf9;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
+}
