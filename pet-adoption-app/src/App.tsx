@@ -2,8 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-
-
 import Header from './components/admin/header/AdminHeader'
 import UserHome from './components/user/home/UserHome'
 // import AdminHome from './components/admin/home/AdminHome'
@@ -30,7 +28,6 @@ function App() {
           <Route path="/admin/archive" element={<AdminArchive></AdminArchive>}></Route>
           <Route path="/admin/adopted" element={<AdminActive></AdminActive>}></Route>
           <Route path="/contact" element={<ContactUs/>}></Route>
-
         </Routes>
       </BrowserRouter>
     </>
