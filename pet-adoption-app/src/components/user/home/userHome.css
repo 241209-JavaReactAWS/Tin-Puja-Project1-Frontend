@@ -29,13 +29,25 @@
     width: 160px;
     border-radius: 40px;
     border: solid 5px white;
-
+    margin-bottom: 20px;
+}
+.logodescription{
+    font-weight: bold;
 }
 .footer{
     text-align: right;
     background-color: bisque;
     font-family: "Sofia", sans-serif;
     box-shadow: 10px 10px 5px grey;
+    margin-top: 50px;
+}
+.footeritems{
+    font-weight: bold;
+    text-decoration: none;
+    color:  black;
+}
+.footeritemsgroup{
+    margin-right: 50px;
 }
 .midsection{
     text-align: center;
@@ -71,7 +83,6 @@
    text-align: center;
    margin-bottom: 1%;
    margin-top: 1%;
-   
 }
 .photos{
     height: auto;
@@ -95,8 +106,61 @@ color: gold;
     color: black;
     border-radius: 40px;
     box-shadow: 10px 10px 5px grey;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-decoration: none;
+    margin-right: 15px;
 }
 .logo:hover{
     border-color: blueviolet;
     border-style: dotted;
+}
+.contentimg{
+    height: auto;
+    width: 300px;
+    border-radius: 60px;
+    border: 2px solid blueviolet ;
+}
+.contentimggroup{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.contactgroup{
+    margin-top: 6opx;
+    text-align: center;
+}
+.contacttitle{
+    color:black;
+    font-size: 40px; 
+}
+.contactparagraph{
+    font-style: italic;
+    margin-top: 20px;
+    font: 30px;
+}
+.contacttitlehead{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: #dbd8e3;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
+}
+
+.contacttitlehead2{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: bisque;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
+}
+
+.contacttitlehead3{
+    border: 1px blueviolet solid;
+    margin-left: 200px;
+    margin-right: 200px;
+        background-color: #defcf9;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 30px;
 }
