@@ -29,7 +29,11 @@
     width: 160px;
     border-radius: 40px;
     border: solid 5px white;
+    margin-bottom: 20px;
 
+}
+.logodescription{
+    font-weight: bold;
 }
 .footer{
     text-align: right;
