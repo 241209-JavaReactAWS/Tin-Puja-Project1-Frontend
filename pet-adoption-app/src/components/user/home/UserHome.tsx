@@ -3,24 +3,22 @@
 import "./userHome.css"
 import Pets from './pets/Pets';
 import Navbar from '../../navbar/Navbar';
-import UserHomeContent from './UserHomeContent';
+import HomeContent from './content/HomeContent';
 
 function UserHome (){
  
   return (
     <div className="root">
-      <header className="styles.headergroup">
-        <h1 className="styles.title">PET ADOPTION</h1>
-          <img className="styles.logo" src=""/ >
+      <header className="headergroup">
+        <h1 className="title">PET ADOPTION</h1>
+          <img className="logo" src=""/ >
           <p>M TOO CUTE FOR THIS..........ADOPT ME NOW!!!</p>
     </header>
     
     <Navbar/>
 
-    <UserHomeContent/>
-
-    <Pets/>
-
+    <HomeContent/>
+    
     <footer className="footer">
         About us 
         <p>We save pets so you can give them a Life</p>
