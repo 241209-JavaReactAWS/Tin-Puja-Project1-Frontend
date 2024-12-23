@@ -12,6 +12,7 @@ import AdminActive from './components/admin/active/AdminActive'
 import AdminArchive from './components/admin/archive/AdminArchive'
 import Login from './components/user/login/Login'
 import ContactUs from './components/user/home/contact/ContactUs';
+import AdminAdopted from './components/admin/adopted/AdminAdopted';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/admin/active" element={<AdminActive></AdminActive>}></Route>
           <Route path="/admin/archive" element={<AdminArchive></AdminArchive>}></Route>
-          <Route path="/admin/adopted" element={<AdminActive></AdminActive>}></Route>
+          <Route path="/admin/adopted" element={<AdminAdopted></AdminAdopted>}></Route>
           <Route path="/contact" element={<ContactUs/>}></Route>
         </Routes>
       </BrowserRouter>
