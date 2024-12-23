@@ -5,13 +5,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/admin/header/AdminHeader'
 import UserHome from './components/user/home/UserHome'
 
-import AboutUs from './components/user/home/about_me/AboutUs'
-import SignUp from './components/user/home/signup/SignUp'
-import Pets from './components/user/home/pets/Pets'
+
 import AdminActive from './components/admin/active/AdminActive'
 import AdminArchive from './components/admin/archive/AdminArchive'
 import Login from './components/user/login/Login'
-import ContactUs from './components/user/home/contact/ContactUs';
+import SignUp from './components/user/home/SignUp';
+import AboutUs from './components/user/home/AboutUs';
+// import { Pets } from '@mui/icons-material';
+import ContactUs from './components/user/home/ContactUs';
+import Pets from './components/user/home/Pets';
 import AdminAdopted from './components/admin/adopted/AdminAdopted';
 
 function App() {

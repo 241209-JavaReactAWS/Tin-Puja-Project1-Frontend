@@ -14,7 +14,7 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import axios from 'axios';
-import UserFooter from '../home/user_footer/UserFooter';
+import UserFooter from '../home/UserFooter';
 import Navbar from '../../navbar/Navbar';
 
 const Card = styled(MuiCard)(({ theme }) => ({

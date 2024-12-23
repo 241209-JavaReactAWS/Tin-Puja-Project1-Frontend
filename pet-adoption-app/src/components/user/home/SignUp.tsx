@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
-import "../userHome.css"
+import "./userHome.css"
 
-import Navbar from '../../../navbar/Navbar'
+import Navbar from '../../navbar/Navbar';
 import { Button, Container, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
-import UserService from '../../userService/UserService';
-import UserFooter from '../user_footer/UserFooter';
+import UserService from '../service/UserService';
+import UserFooter from './UserFooter';
+import { User } from '../../../interfaces/User';
+import { RegisterUser } from '../../../interfaces/RegisterUser';
+
 
 
 function SignUp() {
   
   let userService = new UserService();
 
-  const [register, setRegister] = useState<any>({
+  const [register, setRegister] = useState<RegisterUser>({
     username : "",
     email : "",
     firstname : "",
@@ -19,10 +22,16 @@ function SignUp() {
     password : ""
   })
 
-
    function reigsterNewUser (e : any){
     e.preventDefault();
-    userService.registerUsers(register);
+    userService.registerUsers(register).then(response => {
+      alert("Registration was successful")
+      console.log(response.status)
+  }).catch(error => {
+      alert("Registration failed : please fill all fields  :  " + error)  
+      console.log(error)
+  })
+    
   }
 
   function registrationHanlder(e : any){
@@ -32,17 +41,11 @@ function SignUp() {
     })
   }
 
-    // setUsername("");
-    // setEmail("");
-    // setFirstname("")
-    // setLastname("")
-    // setPassword("")
-
   return (
     <div className='root'>
       <Container>
         <Navbar/>
-        <h1 className='center'>Let's Sign up Now! </h1>
+        <h1 className='titles'>Let's Sign up Now! </h1>
 
           <Form onSubmit = {reigsterNewUser}>
             <FormGroup>
@@ -108,7 +111,6 @@ function SignUp() {
           </Form>
         </Container>
         <UserFooter/>
-
     </div>
 
   )

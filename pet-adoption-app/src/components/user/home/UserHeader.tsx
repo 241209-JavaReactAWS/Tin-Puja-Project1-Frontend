@@ -1,6 +1,7 @@
 import React from 'react'
-import "../userHome.css"
-import logo from "../../../../img/IMG_1825.jpg"
+// import "../userHome.css"
+import "./userHome.css"
+import logo from "../../../img/IMG_1825.jpg"
 
 function UserHeader() {
   return (

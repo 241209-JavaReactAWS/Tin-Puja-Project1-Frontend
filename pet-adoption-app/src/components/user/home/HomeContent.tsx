@@ -1,9 +1,9 @@
 import React from 'react'
-import "../userHome.css"
+import "./userHome.css"
 import { Col, Container, Row } from 'react-bootstrap';
-import flower_dog from "../../../../img/flower-dog.jpg";
-import aussie_puppy from "../../../../img/aussiepuppy.jpg";
-import cat from "../../../../img/cat.jpg";
+import flower_dog from "../../../img/flower-dog.jpg";
+import aussie_puppy from "../../../img/aussiepuppy.jpg";
+import cat from "../../../img/cat.jpg";
 import { Link } from 'react-router-dom';
 
 function UserHomeContent() {
