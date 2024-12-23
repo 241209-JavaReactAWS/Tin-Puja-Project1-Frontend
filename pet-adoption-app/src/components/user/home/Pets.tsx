@@ -1,41 +1,53 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Table } from 'react-bootstrap';
-import Navbar from '../../../navbar/Navbar';
-import PetService from '../../userService/PetService';
+import Navbar from '../../navbar/Navbar';
+import PetService from '../service/PetService';
+import { Pet } from '../../../interfaces/Pet';
+import axiosInstance from '../../../axios/AxiosInterceptor';
+
 
 function Pets() {
-
-    // const [token, setToken] = useState(localStorage.getItem('name') || '');
-    
-    
-
-    // localStorage.setItem('name', name);
-
-
 
     let petService = new PetService;
 
     const [allPets, setAllPets] = useState<any[]>([]);
 
-    function AdoptPet(petId: number) {
-        petService.adoptAPet(petId)
+    // function AdoptPet(petId: number) {
+    //     petService.adoptAPet(petId)
+    //         .then((res) => {
+                // alert("Adoption Attempts was successful")
+    //             console.log("Adoption was sucesful")
+    //         }).catch(error => {
+    //             alert("Adoption attempt failed :  " + error)
+    //             console.log("Adoption attempt failed  :  " + error)
+    //         })
+    // }
+
+   async function AdoptPet(petId: number) {
+        try {
+        await axiosInstance.patch("http://localhost:8080/api/pet/protected/adopt/"+petId,{},
+            {
+                headers: {
+                Authorization: `Bearer ${localStorage.getItem("authorization")}`
+                }, 
+            }
+            );
+            axios.get<Pet[]>("http://localhost:8080/api/pet/public/fetchAll")
             .then((res) => {
-                alert("Adoption was successful")
-                console.log("Adoption was sucesful")
-            }).catch(error => {
-                alert("Adoption attempt failed :  " + error)
-                console.log("Adoption attempt failed  :  " + error)
+                alert("Adoption Attempts was successful")
+                setAllPets(res.data)
             })
-
-
+        } catch (error) {
+            console.error('Adopting pet exception', error);
+        }
     }
 
     useEffect(() => {
-
-        axios.get("http://localhost:8080/api/pet/public/fetchAll")
-            .then((res) => {
-                setAllPets(res.data)
+            petService.getAllPets().then((response) => {
+                setAllPets(response.data)
+            }).catch(error => {
+                console.error('Fetching all pets error', error);
             })
     }, [])
 
@@ -43,7 +55,7 @@ function Pets() {
         <div className='root'>
             <Navbar />
             <Container>
-                <h1>Pets</h1>
+                <h1 className='titles'>Pets</h1>
                 <div>
                     <Table striped bordered hover>
                         <thead>
@@ -55,19 +67,10 @@ function Pets() {
                                 <th>Condition</th>
                                 <th>Gender</th>
                                 <th>Available</th>
-
                             </tr>
                         </thead>
                         <tbody>
-
-
-
-                            {/* { allPets.status == active ? */}
-
                             {allPets.map((item) => (
-
-                                // item.status == "ACTIVE" ? 
-
                                 <tr key={item.petId}>
                                     <td>
                                         <Button
@@ -84,8 +87,6 @@ function Pets() {
                                     <td>{item.gender}</td>
                                     <td>{item.status}</td>
                                 </tr> 
-                                //  :
-                                //  ()
                             ))}
 
                         </tbody>

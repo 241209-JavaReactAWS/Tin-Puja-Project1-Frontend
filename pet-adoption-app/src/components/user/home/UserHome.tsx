@@ -1,10 +1,10 @@
- import React, { useEffect } from 'react';
+ import React from 'react';
 
 import "./userHome.css"
 import Navbar from '../../navbar/Navbar';
-import HomeContent from './content/HomeContent';
-import UserHeader from './user_header/UserHeader';
-import UserFooter from './user_footer/UserFooter';
+import HomeContent from './HomeContent';
+import UserHeader from './UserHeader';
+import UserFooter from './UserFooter';
 
 function UserHome (){
  

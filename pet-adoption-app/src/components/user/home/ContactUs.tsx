@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../../../navbar/Navbar'
+import Navbar from '../../navbar/Navbar';
 import { Container } from 'react-bootstrap'
-import logo from "../../../../img/IMG_1825.jpg"
+import logo from "../../../img/IMG_1825.jpg"
 
 
 function ContactUs() {

@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../../../navbar/Navbar'
+import Navbar from '../../navbar/Navbar';
 import { Card, Col, Container, Row } from 'react-bootstrap'
 
-import coupleDog from "../../../../img/couple_dog.jpg";
-import dogMan from "../../../../img/dog_man.jpg";
-import dogMan2 from "../../../../img/dog_man_2.jpg";
-import UserFooter from '../user_footer/UserFooter';
+import coupleDog from "../../../img/couple_dog.jpg";
+import dogMan from "../../../img/dog_man.jpg";
+import dogMan2 from "../../../img/dog_man_2.jpg";
+import UserFooter from './UserFooter';
 
 function AboutUs() {
   return (
